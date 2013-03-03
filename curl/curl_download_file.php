@@ -1,5 +1,4 @@
 <?php
-#$remote = "http://ptts.iflytek.com/test.wav";
 $remote = "http://downloads.php.net/pierre/ZendOptimizerPlus-20030214-5.3-nts-vc9-x86.zip";
 $local = "/tmp/zendOption.zip";
 

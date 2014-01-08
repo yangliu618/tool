@@ -10,7 +10,7 @@
 #$regex .= "(\?[a-z+&\$_.-][a-z0-9;:@&%=+\/\$_.-]*)?"; // GET Query
 #$regex .= "(#[a-z_.-][a-z0-9+\$_.-]*)?"; // Anchor
 
-$url = isset($_REQUEST['url']) ? $_REQUEST['url'] : 'http://www.baidu.com';
+$url = isset($_REQUEST['url']) ? $_REQUEST['url'] : 'http://www.hao123.com/';
 $content = file_get_contents($url);
 //echo $content;
 preg_match_all("#http:[^\"\'\)\ ]*#", $content,$matches);

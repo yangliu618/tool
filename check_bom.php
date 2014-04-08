@@ -16,7 +16,7 @@ function checkdir($basedir){
         while (($file = readdir($dh)) !== false) {    
             if ($file != '.' && $file != '..'){    
                 if (!is_dir($basedir."/".$file)) {    
-                    echo "filename: $basedir/$file ".checkBOM("$basedir/$file")." <br>";    
+                    echo "filename: $basedir/$file ".checkBOM("$basedir/$file")." <br>".PHP_EOL;    
                 }else{    
                     $dirname = $basedir."/".$file;    
                     checkdir($dirname);    
@@ -36,9 +36,9 @@ function checkBOM ($filename) {
         if ($auto == 1) {    
             $rest = substr($contents, 3);    
             rewrite ($filename, $rest);    
-            return ("<font color=red>BOM found, automatically removed.".PHP_EOL);    
+            return ("<font color=red>BOM found, automatically removed.</font>");    
         } else {    
-            return ("<font color=red>BOM found.</font>".PHP_EOL);    
+            return ("<font color=red>BOM found.</font>");    
         }    
     }    
     else return ("BOM Not Found.");    

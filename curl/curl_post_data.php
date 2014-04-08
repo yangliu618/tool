@@ -22,7 +22,7 @@ for($i=0;$i<10;$i++) {
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 	curl_setopt($ch, CURLOPT_POST, 1);
 	curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);
-	$out =curl_exec($ch);
+	$out = curl_exec($ch);
 	curl_close($ch);
 	print_r($out);
 }

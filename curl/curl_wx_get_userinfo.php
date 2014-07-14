@@ -1,5 +1,5 @@
 <?php
-header('content-text:text/html; charset=utf-8');
+header('Content-type:text/html; charset=utf-8');
 
 /*
 功能：网页授权的方式获取用户基本信息，无需消息交互，只是用户进入到公众号的网页，就可弹出请求用户授权的界面，用户授权后，就可获得其基本信息（此过程甚至不需要用户已经关注公众号。）

@@ -1,3 +1,4 @@
+<pre>
 一、安装 
 1、安装mutt
 # yum -y install mutt
@@ -51,3 +52,4 @@ liuzhiqing@123.com：无法附加文件
 后来解决，添加一个-b参数，这样发送附件就没问题了...
 如下：echo "fujian" | mutt -s "fujian_test" -a "/root/qingshell/report/8.8.8.8.xls" -b liuzhiqing@123.com
 
+</pre>

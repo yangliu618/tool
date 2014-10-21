@@ -1,3 +1,4 @@
+### 先配置linux的邮件客户端 mutt + msmtp发送邮件。
 <pre>
 一、安装 
 1、安装mutt
@@ -53,3 +54,14 @@ liuzhiqing@123.com：无法附加文件
 如下：echo "fujian" | mutt -s "fujian_test" -a "/root/qingshell/report/8.8.8.8.xls" -b liuzhiqing@123.com
 
 </pre>
+
+### 上面的内容直接调用mutt和msmtp来发邮件，调用的是linux的邮件客户端来发送邮件。
+
+另一个文件 send.php 的作用是封装好linux的邮件客户端命令，然后用php调用百度的天气接口获取相关城市的天气预报信息后，发送到相关用户的手机上。
+
+可以直接用php send.php来执行。
+
+### 每天定时跑，可以放到crontab里面，每天跑两次，拉最近的天气情况，crontab里面配置如下：
+	[root@iZ2375x752sZ weatherReport]# crontab -l
+	#crontab for weather report
+	* 8,17 * * * /usr/bin/php /root/weatherReport/send.php 2>&1 >> /root/weatherReport/run.log 

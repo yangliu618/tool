@@ -64,4 +64,4 @@ liuzhiqing@123.com：无法附加文件
 ### 每天定时跑，可以放到crontab里面，每天跑两次，拉最近的天气情况，crontab里面配置如下：
 	[root@iZ2375x752sZ weatherReport]# crontab -l
 	#crontab for weather report
-	* 8,17 * * * /usr/bin/php /root/weatherReport/send.php 2>&1 >> /root/weatherReport/run.log 
+	0 8,17 * * * /usr/bin/php /root/weatherReport/send.php 2>&1 >> /root/weatherReport/run.log 

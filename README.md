@@ -17,3 +17,5 @@ tools for php
 
  git diff HEAD ??
  git diff T
+
+ git merge

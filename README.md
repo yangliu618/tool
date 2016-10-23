@@ -14,3 +14,6 @@ tools for php
  git diff --staged or git diff --cached
 
  git reset HEAD
+
+
+ git diff HEAD ??

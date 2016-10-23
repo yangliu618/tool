@@ -1,0 +1,4 @@
+#git ignore file ro dir..
+
+*.[oa]
+.idea/

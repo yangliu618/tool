@@ -15,5 +15,5 @@ tools for php
 
  git reset HEAD
 
-
  git diff HEAD ??
+ git diff T

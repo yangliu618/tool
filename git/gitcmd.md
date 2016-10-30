@@ -10,11 +10,11 @@
 * git reset –soft：回退到某个版本，只回退了commit的信息，不会恢复到index file一级。如果还要提交，直接commit即可
 * git reset –hard：彻底回退到某个版本，本地的源码也会变为上一个版本的内容
 
- HEAD 最近一个提交
- HEAD^ 上一次
- <commit_id> 每次commit的SHA1值. 可以用git log 看到,也可以在页面上commit标签页里找到
- git reset –soft命令，只是撤销了commit的提交记录，commit改动的代码仍然存在，很受用。
- git reset --soft commit-id,其中的commit-id指的是撤销之前的那个commit id.
+> HEAD 最近一个提交
+> HEAD^ 上一次
+> <commit_id> 每次commit的SHA1值. 可以用git log 看到,也可以在页面上commit标签页里找到
+> git reset –soft命令，只是撤销了commit的提交记录，commit改动的代码仍然存在，很受用。
+> git reset --soft commit-id,其中的commit-id指的是撤销之前的那个commit id.
 
 
 ### git代码库回滚: 指的是将代码库某分支退回到以前的某个commit id

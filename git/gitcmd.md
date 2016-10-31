@@ -71,4 +71,6 @@ git revert 和git reset的区别：
 第三、reset 是在正常的commit历史中,删除了指定的commit,这时 HEAD 是向后移动了,而 revert 是在正常的commit历史中再commit一次,只不过是反向提交,他的 HEAD 是一直向前的.
 
 
+</pre>
 
+aaaaaa

@@ -75,6 +75,4 @@ git revert 和git reset的区别：
 
 aaaaaa
 
-bbbbbb
-
-cccc
+git revert or git reset?

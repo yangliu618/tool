@@ -73,6 +73,4 @@ git revert 和git reset的区别：
 
 </pre>
 
-aaaaaa
-
 git revert or git reset?

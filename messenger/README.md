@@ -1,4 +1,5 @@
 # [MessengerJS](https://github.com/biqing/MessengerJS) #
+from https://github.com/biqing/Messenger 
 
 ## 跨文档通信解决方案 ##
 Since modern browsers have native cross-document communication method(the PostMeessage API, and the "message" event), this project is primarily for the developers who still need to care about the compatiblity in IE6/7, especially the developers in China, I will use Chinese in this document. If you guys wanna learn some more, please leave an [issue](https://github.com/biqing/MessengerJS/issues/new), and I will provide the english version of help.

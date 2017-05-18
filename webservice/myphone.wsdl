@@ -1,0 +1,53 @@
+<?xml version ='1.0' encoding ='UTF-8' ?>   
+<definitions name='phonebook'   
+  targetNamespace='http://www.mysoapservice.cn/'   
+  xmlns:tns='http://www.mysoapservice.cn/'  
+  xmlns:soap='http://schemas.xmlsoap.org/wsdl/soap/'   
+  xmlns:xsd='http://www.w3.org/2001/XMLSchema'   
+  xmlns:soapenc='http://schemas.xmlsoap.org/soap/encoding/'   
+  xmlns:wsdl='http://schemas.xmlsoap.org/wsdl/'   
+  xmlns='http://schemas.xmlsoap.org/wsdl/'>  
+    
+ <types>  
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+        targetNamespace="http://www.mysoapservice.cn/">   
+    </xsd:schema>  
+ </types>   
+  
+<message name='GetPhoneBookRequest'>   
+    <part name="name" type="xsd:string"/>  
+</message>   
+  
+<message name='GetPhoneBookResponse'>   
+    <part name="phonebookInfo" type="xsd:string"/>  
+</message>  
+  
+<portType name='PhoneBookToEveryOneProt'>   
+  <operation name='GetPhoneBook'>   
+    <input message='tns:GetPhoneBookRequest'/>   
+    <output message='tns:GetPhoneBookResponse'/>   
+  </operation>  
+</portType>  
+  
+<binding name='PhoneBookSOAP' type='tns:PhoneBookToEveryOneProt'>   
+  <soap:binding style='rpc'   
+    transport='http://schemas.xmlsoap.org/soap/http'/>   
+  <operation name='GetPhoneBook'>   
+    <soap:operation soapAction='http://www.cwtservice.cn/newOperation/'/>   
+    <input>   
+      <soap:body use='encoded' namespace='urn:xmethods-delayed-quotes'   
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'/>   
+    </input>   
+    <output>   
+      <soap:body use='encoded' namespace='urn:xmethods-delayed-quotes'   
+        encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'/>   
+    </output>   
+  </operation>   
+</binding>  
+  
+<service name='PhoneBookService'>   
+  <port name='PhoneBookSOAP' binding='tns:PhoneBookSOAP'>   
+    <soap:address location='http://local.github/webservice/server.php'/>   
+  </port>   
+</service>   
+</definitions>  

@@ -14,6 +14,11 @@ if [ -e "$tmp_file" ]; then
         rm -fr * 
         mv $tmp_file .
         cp $upload_file "../backup/${file_name}_`date +%Y%m%d_%H%M%S`$file_ext"
+
+		#\cp -f $upload_file /root/project/PHP/theone.tar.gz
+		if [ x$1 != x ]; then
+			\cp -f $upload_file /root/project/PHP/theone.tar.gz
+		fi
         tar -zxvf $upload_file
 fi
 

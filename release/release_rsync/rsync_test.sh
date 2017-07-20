@@ -1,8 +1,14 @@
 #!/bin/bash
 
-cd /root/release/test
-
+cd /root/release/
 
 DATE="`date +%Y%m%d%H%M%S`"
+
 echo $DATE;
-echo 'aaa' >> a.log
+
+if [ x$1 != x ];then
+	echo "has param";
+	#/bin/bash a.sh
+	echo $1 >> a.log
+fi
+
